@@ -1,0 +1,57 @@
+
+thread_create.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <thread_create>:
+   0:	55                   	push   %ebp
+   1:	89 e5                	mov    %esp,%ebp
+   3:	83 ec 28             	sub    $0x28,%esp
+   6:	c7 04 24 00 10 00 00 	movl   $0x1000,(%esp)
+   d:	e8 fc ff ff ff       	call   e <thread_create+0xe>
+  12:	89 45 f4             	mov    %eax,-0xc(%ebp)
+  15:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+  19:	75 1e                	jne    39 <thread_create+0x39>
+  1b:	c7 44 24 04 00 00 00 	movl   $0x0,0x4(%esp)
+  22:	00 
+  23:	c7 04 24 01 00 00 00 	movl   $0x1,(%esp)
+  2a:	e8 fc ff ff ff       	call   2b <thread_create+0x2b>
+  2f:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+  34:	e9 8b 00 00 00       	jmp    c4 <thread_create+0xc4>
+  39:	c7 45 f0 00 00 00 00 	movl   $0x0,-0x10(%ebp)
+  40:	8b 45 f4             	mov    -0xc(%ebp),%eax
+  43:	89 04 24             	mov    %eax,(%esp)
+  46:	e8 fc ff ff ff       	call   47 <thread_create+0x47>
+  4b:	89 45 f0             	mov    %eax,-0x10(%ebp)
+  4e:	83 7d f0 00          	cmpl   $0x0,-0x10(%ebp)
+  52:	79 1b                	jns    6f <thread_create+0x6f>
+  54:	c7 44 24 04 11 00 00 	movl   $0x11,0x4(%esp)
+  5b:	00 
+  5c:	c7 04 24 01 00 00 00 	movl   $0x1,(%esp)
+  63:	e8 fc ff ff ff       	call   64 <thread_create+0x64>
+  68:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+  6d:	eb 55                	jmp    c4 <thread_create+0xc4>
+  6f:	83 7d f0 00          	cmpl   $0x0,-0x10(%ebp)
+  73:	75 4a                	jne    bf <thread_create+0xbf>
+  75:	8b 45 08             	mov    0x8(%ebp),%eax
+  78:	89 44 24 08          	mov    %eax,0x8(%esp)
+  7c:	c7 44 24 04 24 00 00 	movl   $0x24,0x4(%esp)
+  83:	00 
+  84:	c7 04 24 01 00 00 00 	movl   $0x1,(%esp)
+  8b:	e8 fc ff ff ff       	call   8c <thread_create+0x8c>
+  90:	8b 45 0c             	mov    0xc(%ebp),%eax
+  93:	89 04 24             	mov    %eax,(%esp)
+  96:	8b 45 08             	mov    0x8(%ebp),%eax
+  99:	ff d0                	call   *%eax
+  9b:	c7 44 24 04 44 00 00 	movl   $0x44,0x4(%esp)
+  a2:	00 
+  a3:	c7 04 24 01 00 00 00 	movl   $0x1,(%esp)
+  aa:	e8 fc ff ff ff       	call   ab <thread_create+0xab>
+  af:	8b 45 f4             	mov    -0xc(%ebp),%eax
+  b2:	89 04 24             	mov    %eax,(%esp)
+  b5:	e8 fc ff ff ff       	call   b6 <thread_create+0xb6>
+  ba:	e8 fc ff ff ff       	call   bb <thread_create+0xbb>
+  bf:	b8 00 00 00 00       	mov    $0x0,%eax
+  c4:	c9                   	leave  
+  c5:	c3                   	ret    
